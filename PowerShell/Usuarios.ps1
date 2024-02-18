@@ -15,7 +15,7 @@ function borrarUsuarios($archivo){
 }
 
 function crearUser($user){
-    New-LocalUser -Name $user -Password (ConvertTo-SecureString "Contraseña" -AsPlainText -Force) -FullName $user -Description "Descripción del Usuario"
+    New-LocalUser -Name $user -Password (ConvertTo-SecureString "P455WD" -AsPlainText -Force) -FullName $user -Description "Descripción del Usuario"
     Get-Localuser -Name $user | Add-LocalGroupMember -Group 'Usuarios'
 }
 
